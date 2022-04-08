@@ -1,0 +1,165 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-weight: normal;
+    color:white;
+}
+@font-face {
+    font-family:segoe UI;
+    src: url(segoeui.ttf);
+}
+body{
+    background-color:white;
+    width:100vw;
+    height:100vh;
+    background-color:#3A015C;
+}
+header{
+    width:90%;
+    height:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+    
+}
+nav a{
+    text-decoration: none;
+    padding:5px 10px 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+nav .triangulo::after{
+    content: '';
+    width:0px;
+    height:0px;
+    top:15px;
+    left:78px;
+    border-style: solid;
+    border-width: 5px ;
+    border-color: #FF8F0B transparent transparent transparent;
+    position: absolute;
+}
+nav li::after{
+    content: '';
+    width:0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top:25px;
+    position: absolute;
+    background-color:#FF8F0B;
+    transition: width 0.5s ease-in-out;
+}
+nav li:hover::after{
+    width:100%;
+}
+nav li ul{
+    position: absolute;
+    display:none;
+    top:30px;
+}
+nav li ul li{
+    margin-bottom: 10px;
+}
+nav li:hover ul{
+    display: block;
+}
+.menu-bar{
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.container-body{
+    width:100%;
+    height:650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.newsletter{
+    margin-left:8%;
+    display: flex;
+    flex-direction: column;
+    width:415px;
+   
+}
+.news-top h1{
+    font-family:Segoe UI;
+    font-size: 40px;
+    color:#FF8F0B;
+    font-weight: bold;
+}
+.news-top h2{
+    font-family: Segoe UI;
+    font-size:24px;
+    font-weight:600;
+}
+.sub-title{
+    padding:15px 0 27px 0;
+}
+div.form form{
+    display: flex;
+    flex-direction: column;
+}
+div.form label, input[type="text"],input[type="email"]{
+    width:80%;
+    height:27px;
+    margin-bottom: 13px;
+}
+div.form input[type="text"],input[type="email"]{
+    width:100%;
+    height:27px;
+    border-radius:5px;
+    border-style: none;
+    box-shadow: 0 0 5px black;
+    padding:5px;
+    color:black;
+}
+div.form .send{
+    display: flex;
+}
+div.form button[type="submit"]{
+    width:80px;
+    background-color:#FF8F0B;
+    color:#ffffff;
+    height:27px;
+    border-radius:20px;
+    border-style: none;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+    font-family: Segoe UI;
+    font-weight: bold;
+    position: relative;
+}
+div.form .button::after{
+    content: '';
+    position: absolute;
+    width:0;
+    height:0;
+    border-top:8px solid transparent;
+    border-left:8px solid #fff;
+    border-bottom: 8px solid transparent;
+    top:6px;
+    left:60px;
+}
+button .name{
+    margin-right:10px;
+    font-family: Segoe UI;
+} 
+.image{
+    margin-right: 90px;
+}
